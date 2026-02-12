@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+}
+
+.player{
+    width:320px;
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+.album-art{
+    width:200px;
+    height:200px;
+    margin:auto;
+    border-radius:50%;
+    background:url("images.png") no-repeat center/cover;
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    animation:rotate 10s linear infinite;
+}
+
+@keyframes rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.song-title{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.artist{
+    color:gray;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.progress-container{
+    width:100%;
+    height:6px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.progress{
+    height:100%;
+    width:60%;
+    background:#2a5298;
+    border-radius:10px;
+    animation:progress 5s linear infinite;
+}
+
+@keyframes progress{
+    from{width:0%;}
+    to{width:100%;}
+}
+
+.controls{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.control-btn{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#2a5298;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:18px;
+}
+
+.control-btn:hover{
+    background:#1e3c72;
+    transform:scale(1.1);
+}
+
+.play-btn{
+    width:60px;
+    height:60px;
+    font-size:22px;
+}
